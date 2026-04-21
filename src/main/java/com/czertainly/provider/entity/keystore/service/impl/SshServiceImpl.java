@@ -67,6 +67,7 @@ public class SshServiceImpl implements SshService {
         } catch (IOException e) {
             throw new IllegalStateException("Failed to initiate SSH session.", e);
         }
+    }
 
     private String getResponse(String command, ClientSession session, String host) {
         try (ByteArrayOutputStream responseStream = new ByteArrayOutputStream();
